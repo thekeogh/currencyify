@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "dist",
+    "module": "CommonJS",
+    "target": "ES5",
+    "lib": ["ESNext"],
+    "moduleResolution": "Node",
+    "strict": true,
+    "declaration": true,
+    "incremental": true,
+    "esModuleInterop": true,
+    "paths": {
+      "@src/*": ["src/*"],
+      "@currencyify": ["src/currencify.ts"],
+      "@constants": ["src/core/constants.ts"],
+      "@types": ["src/core/types.ts"],
+      // ---
+      "@test.helpers": ["tests/helpers.vitest.ts"],
+    }
+  },
+  "include": ["src", "tests"]
+}

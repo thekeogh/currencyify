@@ -1,0 +1,58 @@
+{
+  "name": "currencyify",
+  "description": "A simple TypeScript library for effortless number-to-currency formatting in browsers and Node.js, supporting multiple locales and custom configurations.",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "package.json",
+    "README.md"
+  ],
+  "author": {
+    "name": "Steve McKeogh",
+    "email": "steve.mckeogh@gmail.com",
+    "url": "https://mckeogh.uk"
+  },
+  "keywords": [
+    "currency",
+    "money",
+    "NumberFormat"
+  ],
+  "engines": {
+    "node": "^20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thekeogh/currencyify.git"
+  },
+  "bugs": {
+    "url": "https://github.com/thekeogh/currencyify/issues"
+  },
+  "homepage": "https://github.com/thekeogh/currencyify#readme",
+  "scripts": {
+    "build": "rimraf ./dist && tsc -p tsconfig.build.json && tsc-alias -p tsconfig.build.json",
+    "test": "vitest",
+    "test:watch": "vitest --watch",
+    "lint": "npm run eslint && npm run prettier",
+    "lint:fix": "npm run eslint:fix && npm run prettier:fix",
+    "prettier": "prettier . --check",
+    "prettier:fix": "prettier . --write",
+    "eslint": "eslint --ext=ts src tests --no-error-on-unmatched-pattern --quiet || true",
+    "eslint:fix": "eslint --ext=ts src tests --no-error-on-unmatched-pattern --quiet --fix || true"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^8.2.0",
+    "@types/node": "^20.8.9",
+    "@typescript-eslint/eslint-plugin": "^6.9.0",
+    "@typescript-eslint/parser": "^6.9.0",
+    "eslint": "^8.52.0",
+    "eslint-plugin-import": "^2.29.0",
+    "prettier": "^3.0.3",
+    "rimraf": "^5.0.5",
+    "tsc-alias": "^1.8.8",
+    "typescript": "^5.2.2",
+    "vite-tsconfig-paths": "^4.2.1",
+    "vitest": "^0.34.6"
+  }
+}
